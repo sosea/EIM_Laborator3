@@ -2,6 +2,7 @@ package lab03.eim.systems.cs.pub.phonedialer;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_dialer);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         phoneNumberEditText = (EditText)findViewById(R.id.phone_number_edit_text);
         callImageButton = (ImageButton)findViewById(R.id.call_image_button);
